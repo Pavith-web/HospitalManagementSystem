@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Hospital Management System</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css\admin.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+                <div class="sidebar-content">
+                    <div class="profile text-center">
+                        <i class="bi bi-person-circle profile-logo"></i>
+                        <h2 class="admin-title">Admin</h2>
+                        <p class="admin-name">Admin Name</p>
+                    </div>
+                    <a href="#" class="btn btn-secondary logout-btn">Log Out</a>
+                    <hr>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="admin.html">
+                                <i class="bi bi-house-door nav-icon"></i>
+                                Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="doctors.html">
+                                <i class="bi bi-person nav-icon"></i>
+                                Doctors
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="schedule.html">
+                                <i class="bi bi-calendar nav-icon"></i>
+                                Schedule
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="appointments.html">
+                                <i class="bi bi-calendar-check nav-icon"></i>
+                                Appointments
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="patients.html">
+                                <i class="bi bi-person-badge nav-icon"></i>
+                                Patients
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="col-md-9 col-lg-10 ml-sm-auto px-4">
+                <div class="header d-flex justify-content-end pt-3 pb-2 mb-3">
+                    <span class="current-date" id="current-date"></span>
+                </div>
+                <div class="dashboard row">
+                    <div class="col-md-6 mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">Upcoming Appointments</h3>
+                                <p class="card-text">Here's quick access to upcoming appointments.</p>
+                                <p class="card-text">More details available in @Appointments section.</p>
+                                <a href="#" class="btn btn-primary">Show all Appointments</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">Upcoming Sessions</h3>
+                                <p class="card-text">Here's quick access to upcoming sessions that are scheduled.</p>
+                                <p class="card-text">Add, remove, and many features available in @Schedule section.</p>
+                                <a href="#" class="btn btn-primary">Show all Sessions</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JS for Date -->
+    <script src="js/admin.js"></script>
+</body>
+</html>

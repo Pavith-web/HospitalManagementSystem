@@ -1,0 +1,36 @@
+body {
+    background-color: #f8f9fa; /* Light background color for better contrast */
+}
+
+.login-card {
+    max-width: 1000px; /* Increased width of the card */
+    border-radius: 10px; /* Rounded corners for the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow for a lifted effect */
+}
+
+
+.login-card .card-body {
+    padding: 30px; /* Increase padding to give more space inside the card body */
+    width: 100%; /* Ensure the card body takes full width of the card */
+}
+
+.card-title {
+    font-weight: bold; /* Makes the title bold */
+}
+
+.card-text {
+    font-size: 0.9em; /* Smaller font size for the subtext */
+    color: #6c757d; /* Lighter color for the text */
+}
+
+.signup-link {
+    text-align: center; /* Center-aligns the sign-up text */
+}
+
+.signup-link a {
+    color: #007bff; /* Blue color for the sign-up link */
+}
+
+.signup-link a:hover {
+    color: #0056b3; /* Darker blue for hover effect */
+}
