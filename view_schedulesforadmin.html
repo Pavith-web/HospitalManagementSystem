@@ -5,9 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View All Doctor Schedules</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 56px); /* Full viewport height minus navbar height */
+            padding-top: 56px; /* Space for the fixed navbar */
+        }
+        .card {
+            width: 100%;
+            max-width: 900px; /* Set max width for the card */
+            margin: 0 auto;
+        }
+        .table-responsive {
+            margin-bottom: 20px; /* Add space below the table */
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">Hospital Management System</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,45 +51,54 @@
             </div>
         </div>
     </nav>
-    <div class="container mt-5">
-        <h2 class="text-center">View All Doctor Schedules</h2>
-        <div class="table-responsive">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Doctor</th>
-                        <th>Date</th>
-                        <th>Time</th>
-                        <th>Available</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Example data; replace with dynamic content -->
-                    <tr>
-                        <td>Doctor 1</td>
-                        <td>2024-08-20</td>
-                        <td>09:00</td>
-                        <td>Yes</td>
-                    </tr>
-                    <tr>
-                        <td>Doctor 2</td>
-                        <td>2024-08-21</td>
-                        <td>10:00</td>
-                        <td>No</td>
-                    </tr>
-                    <tr>
-                        <td>Doctor 3</td>
-                        <td>2024-08-22</td>
-                        <td>11:00</td>
-                        <td>Yes</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="d-grid gap-2 mt-4">
-            <!-- Button to navigate back to the Manage Schedule page -->
-            <a href="manage_schedulesbyadmin.html" class="btn btn-secondary btn-lg">Back to Manage Schedule</a>
+
+    <!-- Centered View All Doctor Schedules Table -->
+    <div class="main-container">
+        <div class="card shadow">
+            <div class="card-body">
+                <h2 class="text-center">View All Doctor Schedules</h2>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Doctor</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Available</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Example data; replace with dynamic content -->
+                            <tr>
+                                <td>Doctor 1</td>
+                                <td>2024-08-20</td>
+                                <td>09:00</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Doctor 2</td>
+                                <td>2024-08-21</td>
+                                <td>10:00</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td>Doctor 3</td>
+                                <td>2024-08-22</td>
+                                <td>11:00</td>
+                                <td>Yes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="d-grid gap-2 mt-4">
+                    <!-- Button to navigate back to the Manage Schedule page -->
+                    <a href="manage_schedulesbyadmin.html" class="btn btn-secondary btn-lg">Back to Manage Schedule</a>
+                </div>
+            </div>
         </div>
     </div>
+
+    <!-- Bootstrap Bundle with Popper (for dropdowns, modals, etc.) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
