@@ -13,21 +13,19 @@
             <div class="mb-3">
                 <label for="doctor" class="form-label">Select Doctor</label>
                 <select class="form-select" id="doctor">
+                    <option value="">Select a doctor</option>
                     <option value="doctor1">Doctor 1</option>
                     <option value="doctor2">Doctor 2</option>
                     <option value="doctor3">Doctor 3</option>
                 </select>
             </div>
-            <div class="mb-3">
-                <label for="appointment" class="form-label">Select Appointment to Cancel</label>
-                <textarea class="form-control" id="appointment" rows="3" placeholder="Details of the appointment to cancel"></textarea>
-            </div>
-            <div class="d-grid gap-2">
-                <button type="submit" class="btn btn-danger">Confirm Cancellation</button>
-            </div>
-            
         </form>
+
+        <div id="appointments" class="mt-4"></div> <!-- Container for appointments -->
+
     </div>
-   
+
+    <!-- Link to the external JavaScript file -->
+    <script src="../../js/userjs/cancel_appointment.js"></script>
 </body>
 </html>
