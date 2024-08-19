@@ -30,23 +30,29 @@
     </nav>
     <div class="container mt-5">
         <h2 class="text-center">Setup Schedule</h2>
-        <form>
+        <form id="scheduleForm">
             <div class="mb-3">
                 <label for="date" class="form-label">Select Date</label>
-                <input type="date" class="form-control" id="date">
+                <input type="date" class="form-control" id="date" required>
             </div>
             <div class="mb-3">
-                <label for="time" class="form-label">Select Time</label>
-                <input type="time" class="form-control" id="time">
+                <label for="startTime" class="form-label">Start Time</label>
+                <input type="time" class="form-control" id="startTime" required>
+            </div>
+            <div class="mb-3">
+                <label for="endTime" class="form-label">End Time</label>
+                <input type="time" class="form-control" id="endTime" required>
             </div>
             <div class="d-grid gap-2">
                 <button type="submit" class="btn btn-primary">Save Schedule</button>
             </div>
             <div class="d-grid gap-2 mt-4">
-                <!-- Button to navigate back to the Manage Schedule page -->
+                <!-- Button to navigate back to the Doctor's Dashboard page -->
                 <a href="doctor_dashboard.html" class="btn btn-secondary btn-lg">Back to Doctor's Dashboard</a>
             </div>
         </form>
     </div>
+
+    <script src="../../js/doctorjs/doctor_schedule_form_validation.js"></script>
 </body>
 </html>

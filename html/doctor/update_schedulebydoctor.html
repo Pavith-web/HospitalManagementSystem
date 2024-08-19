@@ -14,7 +14,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto"> <!-- Align links to the right -->
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
@@ -28,29 +28,61 @@
             </div>
         </div>
     </nav>
-    <div class="container mt-5">
+    <div class="container my-5">
         <h2 class="text-center">Update Schedule</h2>
-        <form>
-            <div class="mb-3">
-                <label for="current-schedule" class="form-label">Current Schedule</label>
-                <textarea class="form-control" id="current-schedule" rows="3" placeholder="View current schedule here..."></textarea>
+
+        <!-- Displaying current schedule in a table -->
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">Current Schedule</div>
+            <div class="card-body">
+                <table class="table table-bordered">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Date</th>
+                            <th>Start Time</th>
+                            <th>End Time</th>
+                            <th>Updated At</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="current-date">Loading...</td>
+                            <td>09:00 AM</td>
+                            <td>05:00 PM</td>
+                            <td>08:30 AM</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+        </div>
+
+        <!-- Update Schedule Form -->
+        <form id="updateScheduleForm">
             <div class="mb-3">
                 <label for="new-date" class="form-label">Select New Date</label>
-                <input type="date" class="form-control" id="new-date">
+                <input type="date" class="form-control" id="new-date" required>
             </div>
             <div class="mb-3">
                 <label for="new-time" class="form-label">Select New Time</label>
-                <input type="time" class="form-control" id="new-time">
+                <input type="time" class="form-control" id="new-time" required>
             </div>
             <div class="d-grid gap-2">
                 <button type="submit" class="btn btn-primary">Update Schedule</button>
             </div>
             <div class="d-grid gap-2 mt-4">
-                <!-- Button to navigate back to the Manage Schedule page -->
                 <a href="doctor_dashboard.html" class="btn btn-secondary btn-lg">Back to Doctor's Dashboard</a>
             </div>
         </form>
     </div>
+
+    <script src="../../js/doctorjs/update_doctor_schedule_form_validation.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dateCell = document.getElementById('current-date');
+            const today = new Date();
+            const formattedDate = today.toLocaleDateString(); // Format date as needed (e.g., MM/DD/YYYY)
+            dateCell.textContent = formattedDate;
+        });
+    </script>
 </body>
 </html>
