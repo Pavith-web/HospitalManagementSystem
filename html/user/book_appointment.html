@@ -14,7 +14,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto"> <!-- Align links to the right -->
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
@@ -30,10 +30,11 @@
     </nav>
     <div class="container mt-5">
         <h2 class="text-center">Book Appointment</h2>
-        <form>
+        <form id="appointmentForm">
             <div class="mb-3">
                 <label for="doctor" class="form-label">Select Doctor</label>
-                <select class="form-select" id="doctor">
+                <select class="form-select" id="doctor" required>
+                    <option value="">Select a doctor</option>
                     <option value="doctor1">Doctor 1</option>
                     <option value="doctor2">Doctor 2</option>
                     <option value="doctor3">Doctor 3</option>
@@ -41,16 +42,18 @@
             </div>
             <div class="mb-3">
                 <label for="date" class="form-label">Select Date</label>
-                <input type="date" class="form-control" id="date">
+                <input type="date" class="form-control" id="date" required>
             </div>
             <div class="mb-3">
                 <label for="time" class="form-label">Select Time</label>
-                <input type="time" class="form-control" id="time">
+                <input type="time" class="form-control" id="time" required>
             </div>
             <div class="d-grid gap-2">
                 <button type="submit" class="btn btn-primary">Book Appointment</button>
             </div>
         </form>
     </div>
+
+    <script src="../../js/userjs/appointment_form_validation.js"></script>
 </body>
 </html>
