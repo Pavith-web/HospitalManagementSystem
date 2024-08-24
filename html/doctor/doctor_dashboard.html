@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doctor Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/doctor_dashboard_styles.css"> <!-- Link to the external CSS file -->
 </head>
 <body>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#">Hospital Management System</a>
@@ -28,16 +30,22 @@
             </div>
         </div>
     </nav>
-    <div class="container mt-5">
-        <h2 class="text-center">Doctor Dashboard</h2>
-        <div class="d-grid gap-2 col-6 mx-auto">
-            <!-- Button to navigate to Setup Schedule page -->
-            <a href="setup_schedulefordoctor.html" class="btn btn-primary btn-lg">Setup Schedule</a>
-            <!-- Button to navigate to Update Schedule page -->
-            <a href="update_schedulebydoctor.html" class="btn btn-secondary btn-lg">Update Schedule</a>
-            <!-- Button to navigate to View Appointments page -->
-            <a href="view_appointmentsfordoctor.html" class="btn btn-success btn-lg">View Appointments</a>
+
+    <!-- Main content -->
+    <div class="container">
+        <div class="dashboard-card">
+            <h1>Doctor Dashboard</h1>
+            <div class="d-grid gap-2">
+                <!-- Button to navigate to Setup Schedule page -->
+                <a href="setup_schedulefordoctor.html" class="btn btn-primary btn-lg">Setup Schedule</a>
+                <!-- Button to navigate to Update Schedule page -->
+                <a href="update_schedulebydoctor.html" class="btn btn-secondary btn-lg">Update Schedule</a>
+                <!-- Button to navigate to View Appointments page -->
+                <a href="view_appointmentsfordoctor.html" class="btn btn-success btn-lg">View Appointments</a>
+            </div>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
